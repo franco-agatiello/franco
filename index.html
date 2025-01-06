@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneo de Truco - Grupo Casino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Torneo de Truco 2025 - Grupo Casino</h1>
+
+        <div class="input-row">
+            <label for="tipoPartida">Tipo de Partida:</label>
+            <select id="tipoPartida" onchange="cambiarFormulario()">
+                <option value="2v2">2 vs 2</option>
+                <option value="3v3">3 vs 3</option>
+            </select>
+        </div>
+
+        <div id="formularioPartida">
+            <!-- El formulario dinámico se insertará aquí -->
+        </div>
+
+        <button onclick="registrarPartida()">Registrar Partida</button>
+
+        <h2>Gestionar Jugadores</h2>
+        <div class="input-row">
+            <input type="text" id="nuevoJugador" placeholder="Nombre del nuevo jugador">
+            <button onclick="agregarJugador()">Agregar Jugador</button>
+        </div>
+        <div class="input-row">
+            <select id="jugadoresRegistrados">
+                <!-- Jugadores registrados se llenarán aquí -->
+            </select>
+            <button onclick="eliminarJugador()">Eliminar Jugador</button>
+        </div>
+
+        <table id="tablaGeneral">
+            <thead>
+                <tr>
+                    <th>Participante</th>
+                    <th>Puntos Totales</th>
+                    <th>Partidas Jugadas</th>
+                    <th>Promedio</th>
+                    <th>Ganadas</th>
+                    <th>Perdidas</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
